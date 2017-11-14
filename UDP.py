@@ -9,7 +9,7 @@ import random
 import time
 
 
-class UDP():
+class UDP(object):
     """docstring fo UDP_client."""
     def __init__(self, port):
         self._port = port
