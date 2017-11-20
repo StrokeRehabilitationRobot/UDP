@@ -18,7 +18,8 @@ class UDP(object):
 
 
     def send_packet(self, id, packet):
-        id_packet = [id,0,0,0]
+
+        id_packet = [id]
         buf = struct.pack('%sf' % len(packet), *packet)
         buf_id = struct.pack('%si' % len(id_packet), *id_packet)
         sent = self._sock.sendto(buf_id+buf, self._server_address)
