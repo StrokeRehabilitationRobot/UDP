@@ -23,9 +23,7 @@ class UDP(object):
         buf = struct.pack('%sf' % len(packet), *packet)
         buf_id = struct.pack('%si' % len(id_packet), *id_packet)
         sent = self._sock.sendto(buf_id+buf, self._server_address)
-        sys.stderr
         data, server = self._sock.recvfrom(self._port)
-
         return array.array('f',data )
 
 
