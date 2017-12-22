@@ -38,15 +38,7 @@ class UDP(object):
 
 
 
-    def send_packet(self, id, packet):
-        """
-
-        :param board: ID of the board (int)
-        :param id:  ID of the packet (int)
-        :param packet: the packet to sent to the board
-        :return: the message from the board
-        """
-        self.send_packet(0,id,packet)
+    
 #
 # udp = UDP(9876)
 #
